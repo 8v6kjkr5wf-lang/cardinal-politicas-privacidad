@@ -177,7 +177,8 @@ Al terminar cada lote, firma con el propietario y los colindantes presentes el c
 5. **Contenido mínimo sugerido del plano** **[VERIFICAR contra el formato del manual]:**
    - Cuadro de construcción (EST–PV, rumbo, distancia, V, coordenadas Y, X)
    - Superficie del terreno y superficie construida
-   - Medidas y colindancias por orientación (Norte, Sur, Oriente, Poniente)
+   - Medidas y colindancias por orientación (Norte, Sur, Oriente, Poniente), en formato registral (ver sección 12)
+   - Ubicación del lote dentro de la parcela matriz (ver sección 12)
    - Croquis de localización con calles y referencias
    - Norte, escala gráfica y numérica, y curvas de nivel
    - Clave catastral, propietario o poseedor y ubicación
@@ -190,6 +191,7 @@ Al terminar cada lote, firma con el propietario y los colindantes presentes el c
 3. Archivo CSV de vértices en ITRF2008 / UTM 14N.
 4. Acta o croquis de colindancias firmado.
 5. Memoria técnica del sector (una por manzana): equipo, base y su cálculo, puntos de control, RMSE de los CHK, fecha y responsables.
+6. Para juicio de usucapión: plano de conjunto de la parcela matriz, medidas y colindancias en formato registral, tabla de comparación contra el contrato y respaldo de los datos crudos (ver sección 12).
 
 # 10. Rendimiento estimado (manzana de unos 30 lotes)
 | Actividad | Tiempo |
@@ -210,3 +212,34 @@ Con este método un equipo de 2 personas puede levantar en campo una manzana com
 - Marcar la diana del punto de control en la orilla y no en el centro.
 - Tomar la parte de arriba de la barda en la ortofoto como si fuera el lindero.
 - No dejar puntos de verificación: sin ellos no puedes demostrar la precisión.
+
+# 12. Uso de los planos en juicio de usucapión
+
+> Nota del director de catastro: los planos se presentarán como prueba en **juicios de usucapión**. Esto sube el nivel de exigencia, porque el plano deja de ser solo un trámite administrativo y pasa a ser **prueba pericial** que el juez y la contraparte pueden revisar. Los criterios de esta sección son técnicos; los jurídicos deben confirmarse con el abogado de cada caso.
+
+## 12.1 Por qué importa
+En la usucapión el actor debe acreditar, entre otras cosas, la **identidad del inmueble**: que lo que posee es exactamente lo que demanda, y que forma parte del predio inscrito a nombre del demandado (el titular registral). Esa identidad normalmente se prueba con el plano topográfico y, si se ofrece, con la **pericial en topografía**.
+
+## 12.2 Requisitos adicionales del levantamiento
+1. **Ligar el lote al predio de mayor extensión (la parcela matriz):**
+   - Consigue el título de dominio pleno, el plano de la parcela del RAN (PROCEDE/FANAR) y el certificado de inscripción del IFREM.
+   - Levanta o reconstruye el **polígono de la parcela completa** y muestra cada lote **dentro** de ella.
+   - Los planos del RAN suelen estar en ITRF92: transfórmalos a ITRF2008 antes de compararlos y documenta la transformación.
+2. **Plano de conjunto por parcela** con todos los lotes, las calles y una tabla de superficies: lotes más vialidades más remanente igual a la superficie de la parcela. Es la mejor prueba de que la fracción pertenece al predio inscrito.
+3. **Medidas y colindancias en formato registral**, además del cuadro de construcción. Por ejemplo: *"Al Norte: 18.593 m con Calle Benito Juárez; al Oriente: …"*. Así el abogado las transcribe tal cual en la demanda.
+4. **Tabla comparativa por lote:** medidas y superficie del **contrato privado** frente a las del **levantamiento**, con las diferencias. Las discrepancias que no se explican son un motivo común para que se niegue la acción o se pida aclarar la demanda.
+5. **Colindantes con nombre completo** según la posesión actual, verificados en campo y firmados en el acta. Pueden servir como testigos.
+6. **Evidencia que se pueda reproducir:** conservar los datos crudos GNSS, el RINEX de la base y de la RGNA, las fotos de los vértices con fecha, el reporte de WebODM, el RMSE de los puntos de verificación y las actas firmadas. Un perito de la contraparte debe poder repetir el cálculo.
+7. **Memoria técnica firmada por lote** (o por sector, con un anexo por lote): método, equipo con número de serie, certificado de calibración si existe, marco de referencia, precisión obtenida y responsable.
+8. Usar **los mismos datos** en el plano, la memoria, el cuadro y la demanda. Ninguna cifra debe variar entre documentos, ni siquiera por redondeo.
+
+## 12.3 Tu papel como técnico
+- Puedes ser llamado a **ratificar el plano o dictamen** ante el juzgado y a responder las preguntas de las partes. Ten a la mano la cédula profesional y la acreditación del ayuntamiento.
+- Si el juzgado exige **perito registrado**, revisa los requisitos de la lista de peritos del Poder Judicial del Estado de México.
+- Mantén la imparcialidad: el plano describe **lo que existe en campo**. Si un vecino no está de acuerdo con un lindero, anótalo como **lindero en conflicto**; no lo resuelvas en el dibujo.
+- Define con el ayuntamiento y los interesados **quién paga y para quién trabajas** (ayuntamiento o particular). En un juicio la contraparte puede cuestionarlo.
+
+## 12.4 Coordinar con el abogado o la defensoría antes de empezar
+- El formato que espera el juzgado: tamaño del plano, escala, firmas y sellos.
+- Si la demanda va contra el titular registral (el ejidatario que obtuvo el dominio pleno) y si hace falta acreditar la **causa generadora de la posesión** (contrato de compraventa o cesión). La fecha y las medidas del contrato deben ser congruentes con el plano.
+- Qué pasa con las **calles**: siguen siendo parte de la parcela inscrita hasta que se donen o se municipalicen.
