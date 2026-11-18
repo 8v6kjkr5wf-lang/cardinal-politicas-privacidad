@@ -23,7 +23,13 @@ Obtener, para cada lote de una manzana o colonia en regularización:
 # 1-bis. Fundamento en el Manual Catastral 2024 (IGECEM)
 Fuente: Gaceta del Gobierno, 29 de mayo de 2024, Sección Segunda, No. 95. Abroga el manual de 2014.
 
-- **LT014. Quién puede levantar:** la persona debe estar **certificada en la NICL "Funciones del Proceso Catastral"** por la Comisión Certificadora de Competencia Laboral **e inscrita en el padrón de especialistas en levantamiento topográfico catastral del IGECEM**. La acreditación del ayuntamiento **no basta**: tramita ambas cosas antes de firmar planos.
+- **LT013 y LT014. Quién puede levantar:** la persona **designada** mediante orden de trabajo debe estar **certificada en la NICL "Funciones del Proceso Catastral"** e **inscrita en el padrón de especialistas del IGECEM**.
+  - **Esquema acordado con la Dirección de Catastro de Texcoco:** el **Director de Catastro**, que está certificado, es el **responsable** y quien firma y sella el plano. El arquitecto participa como **apoyo técnico**: ejecuta el levantamiento, procesa los datos y documenta el método. Su firma no va en el plano oficial.
+  - Recomendaciones para que el esquema quede firme:
+    1. que la **orden de trabajo u oficio de comisión** diga por escrito ese papel;
+    2. que el responsable certificado (o un servidor certificado de catastro) **esté presente en la diligencia** y firme el acta, porque el acta da fe de hechos ocurridos en campo;
+    3. que el plano nombre a los responsables reales del levantamiento, del cálculo y de la autorización, como exige LT025-p, de acuerdo con lo que decida el Director.
+  - La **memoria técnica** hace que el trabajo se pueda replicar y revisar.
 - **LT020 y III.1.4.2-I. Cuándo se exige instrumento de precisión:** predios mayores de 2,000 m², topografía accidentada, configuración muy irregular o **cuando no exista cartografía** en la cual apoyarse. Los predios menores de 2,000 m² se pueden medir con cinta apoyándose en cartografía 1:500 o 1:1000. En ex-parcelas sin cartografía, el método de precisión es el que corresponde, y además es el más defendible.
 - **III.1.4.2-XVII. Métodos admitidos para linderos:** **geodésico-topográfico, fotogramétrico o su combinación.** GNSS más dron está expresamente previsto.
 - **LT019. Vértices de común acuerdo:** se ubican en presencia del solicitante y los colindantes, sobre los puntos que **de común acuerdo** señalen. Si los vértices son desconocidos, **se suspende la diligencia**: no se replantea.
@@ -308,17 +314,24 @@ En cada predio, y en este orden:
 5. Memoria técnica del sector (una por manzana): equipo, base y su cálculo, puntos de control, RMSE de los CHK, fecha y responsables.
 6. Para juicio de usucapión: plano de conjunto de la parcela matriz, medidas y colindancias en formato registral, tabla de comparación contra el contrato y respaldo de los datos crudos (ver sección 12).
 
-# 10. Rendimiento estimado (manzana de unos 30 lotes)
+# 10. Rendimiento estimado (parcela de ~40 lotes de 200–300 m², ya conciliados, con calles y servidumbres definidas)
+Una parcela así mide aproximadamente 1.0 a 1.5 ha con calles incluidas. Tiene unos **100–130 vértices únicos**, porque los vértices compartidos se miden una sola vez.
+
 | Actividad | Tiempo |
 |---|---|
+| Línea de control (una vez por colonia; cubre varias parcelas) | ½ jornada |
 | Instalar base y dianas | 1 h |
-| Vuelo (2 pasadas) | 30–45 min |
+| Vuelo (1 batería, 2 pasadas a 60 m) | 20–30 min |
 | Puntos de control y verificación | 45 min |
-| Vértices con colindantes | 6–10 min por lote → 3–5 h |
-| Procesamiento WebODM | 2–6 h (desatendido) |
-| Dibujo y plano por lote | 20–40 min por lote |
+| Diligencia por lote (alcances, identificaciones, vértices de común acuerdo, acta) | 10–15 min por lote → 7–10 h |
+| Procesamiento WebODM | 2–4 h (desatendido) |
+| Cálculo, dibujo y plano por lote | 20–30 min por lote → 2 a 3 días de gabinete |
 
-Con este método un equipo de 2 personas puede levantar en campo una manzana completa por jornada. El factor que más limita es la coordinación con los colindantes.
+**Cada parcela lleva unos 2 días de campo** (por el tiempo de las actas, no de la medición) **y 2–3 días de gabinete.**
+
+Como los lotes miden menos de 2,000 m², LT020 y LT029 permitirían medir con cinta, pero solo **apoyándose en cartografía 1:500 o 1:1000**, que en ex-parcelas normalmente no existe. Por eso corresponde el método de precisión, que además deja coordenadas que se pueden comprobar.
+
+**Orden recomendado:** primero un **plano de conjunto de la parcela** (lotificación con calles y servidumbres, según las actas de conciliación) y después los planos individuales. Así se asegura que la suma de lotes más calles cierre con la parcela.
 
 # 11. Errores frecuentes
 - Medir vértices con solución FLOAT y no darse cuenta.
@@ -357,11 +370,11 @@ En la usucapión el actor debe acreditar, entre otras cosas, la **identidad del 
 7. **Memoria técnica firmada por lote** (o por sector, con un anexo por lote): método, equipo con número de serie, certificado de calibración si existe, marco de referencia, precisión obtenida y responsable.
 8. Usar **los mismos datos** en el plano, la memoria, el cuadro y la demanda. Ninguna cifra debe variar entre documentos, ni siquiera por redondeo.
 
-## 12.3 Tu papel como técnico
-- Puedes ser llamado a **ratificar el plano o dictamen** ante el juzgado y a responder las preguntas de las partes. Ten a la mano la cédula profesional y la acreditación del ayuntamiento.
-- Si el juzgado exige **perito registrado**, revisa los requisitos de la lista de peritos del Poder Judicial del Estado de México.
-- Mantén la imparcialidad: el plano describe **lo que existe en campo**. Si un vecino no está de acuerdo con un lindero, anótalo como **lindero en conflicto**; no lo resuelvas en el dibujo.
-- Define con el ayuntamiento y los interesados **quién paga y para quién trabajas** (ayuntamiento o particular). En un juicio la contraparte puede cuestionarlo.
+## 12.3 Papel del apoyo técnico
+- El plano oficial lo firman y sellan la Dirección de Catastro y su responsable certificado. El apoyo técnico **no firma el plano**, pero sí entrega la **memoria técnica** con los datos crudos, que es lo que permite **replicar** el trabajo, tal como pidió el Director.
+- Si el plano se objeta en el juicio, al **Director** o a quien firmó le pueden pedir que **ratifique**. Puede que te llamen como testigo técnico de cómo se midió, así que conserva el expediente completo.
+- Mantén la imparcialidad: el plano describe **lo que existe en campo** y lo que se acordó en las mesas de conciliación y en la diligencia.
+- Deja por escrito **quién paga y a quién reportas** (ayuntamiento o vecinos).
 
 ## 12.4 Coordinar con el abogado o la defensoría antes de empezar
 - El formato que espera el juzgado: tamaño del plano, escala, firmas y sellos.
