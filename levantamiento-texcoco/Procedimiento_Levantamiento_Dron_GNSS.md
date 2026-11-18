@@ -20,6 +20,15 @@ Obtener, para cada lote de una manzana o colonia en regularización:
 
 **Equipo de referencia:** dron DJI Mini 3, receptores GNSS base + rover RTK (propios o rentados), WebODM, QGIS/AutoCAD y la plantilla `Plantilla_Cuadro_de_Construccion.xlsx`.
 
+# 1-bis. Fundamento en el Manual Catastral 2024 (IGECEM)
+Fuente: Gaceta del Gobierno, 29 de mayo de 2024, Sección Segunda, No. 95. Abroga el manual de 2014.
+
+- **LT014. Quién puede levantar:** la persona debe estar **certificada en la NICL "Funciones del Proceso Catastral"** por la Comisión Certificadora de Competencia Laboral **e inscrita en el padrón de especialistas en levantamiento topográfico catastral del IGECEM**. La acreditación del ayuntamiento **no basta**: tramita ambas cosas antes de firmar planos.
+- **LT020 y III.1.4.2-I. Cuándo se exige instrumento de precisión:** predios mayores de 2,000 m², topografía accidentada, configuración muy irregular o **cuando no exista cartografía** en la cual apoyarse. Los predios menores de 2,000 m² se pueden medir con cinta apoyándose en cartografía 1:500 o 1:1000. En ex-parcelas sin cartografía, el método de precisión es el que corresponde, y además es el más defendible.
+- **III.1.4.2-XVII. Métodos admitidos para linderos:** **geodésico-topográfico, fotogramétrico o su combinación.** GNSS más dron está expresamente previsto.
+- **LT019. Vértices de común acuerdo:** se ubican en presencia del solicitante y los colindantes, sobre los puntos que **de común acuerdo** señalen. Si los vértices son desconocidos, **se suspende la diligencia**: no se replantea.
+- **LT006. Limitación legal:** los resultados del levantamiento topográfico catastral *"sólo se podrán utilizar para trámites administrativos"*. Ver la sección 12 por sus efectos en el juicio de usucapión.
+
 # 2. Marco de referencia
 
 | Concepto | Valor |
@@ -30,13 +39,13 @@ Obtener, para cada lote de una manzana o colonia en regularización:
 | Alturas | Ortométricas, convertidas con el modelo geoidal de INEGI (GGM10 o el vigente) |
 | Unidades | metros, 3 decimales en coordenadas y distancias |
 
-**[VERIFICAR]** que el manual vigente y el catastro municipal pidan este mismo marco. Algunos catastros todavía trabajan en ITRF92 o en coordenadas locales. Si es así, pide al municipio sus parámetros de transformación.
+**Manual III.1.4.2-XI y XV:** los trabajos deben estar **ligados al sistema geodésico de referencia oficial** (RGNA o RGNP, o red local ligada a ellas). Las alturas GPS se convierten a **ortométricas con el modelo geoidal** vigente, según la Norma Técnica para el Sistema Geodésico Nacional. El manual remite a esa norma de INEGI, que fija el marco oficial (ITRF2008 época 2010.0). Si el catastro municipal todavía trabaja en ITRF92 o en coordenadas locales, pide sus parámetros de transformación.
 
 # 3. Equipo y materiales (lista de revisión)
 
 **GNSS**
 
-- [ ] Receptor base + antena + tripié + base nivelante o bastón con bípode
+- [ ] **Dos receptores GNSS de doble frecuencia** (Manual XIV), base y rover, con antena, tripié y base nivelante o bastón con bípode
 - [ ] Rover + bastón de 2 m con nivel de burbuja calibrado
 - [ ] Radio (LoRa/UHF) o datos móviles para las correcciones RTK
 - [ ] Baterías cargadas y power bank; celular o colectora con la app (Emlid Flow, SW Maps, etc.)
@@ -51,7 +60,8 @@ Obtener, para cada lote de una manzana o colonia en regularización:
 **Señalización**
 
 - [ ] 8 a 12 dianas de puntos de control (lona de 50×50 cm con patrón de damero blanco y negro, o pintura en aerosol sobre el pavimento)
-- [ ] Clavos de acero tipo *PK* o varilla con tapón y pintura para marcar la base y los vértices
+- [ ] Clavos de acero tipo *PK* o varilla con tapón y pintura para marcar los vértices de los predios
+- [ ] Para la línea de control: **2 monumentos de concreto con placa metálica** (ver 5.1) y formato *Cédula de Estaciones de Control Geodésico*
 - [ ] Marcador, libreta de campo y formatos de acta de colindancia
 
 **Documentos**
@@ -70,7 +80,7 @@ Obtener, para cada lote de una manzana o colonia en regularización:
    - Agrega **3 puntos de verificación** que **no** entran al procesamiento y sirven para medir la precisión.
    - Colócalos en lugares abiertos, sin sombra de árboles ni aleros, visibles desde el aire y estables (banqueta o calle).
 5. **Plan de vuelo** (ver sección 6).
-6. **Aviso a vecinos y colindantes:** el ayuntamiento debe citar a propietarios y colindantes para el día del levantamiento, porque los vértices se marcan **en presencia de ambos colindantes**. **[VERIFICAR]** en el manual el formato de citatorio o acta de verificación de linderos.
+6. **Aviso a vecinos y colindantes:** el ayuntamiento debe citar a propietarios y colindantes para el día del levantamiento, porque los vértices se marcan **en presencia de ambos colindantes**. Usa los formatos anexos del Manual 2024: notificación, citatorio y relación de colindantes.
 
 # 4-bis. Expediente previo por predio (NICL de 2022)
 Antes de programar la diligencia, el expediente de cada lote debe contener:
@@ -85,14 +95,32 @@ Antes de programar la diligencia, el expediente de cada lote debe contener:
 
 Para el programa de regularización, propón al ayuntamiento recibir y revisar los expedientes **por manzana completa** antes del día de campo.
 
-# 5. Base GNSS
+# 5. Control geodésico y base GNSS (Manual III.1.4.2, XI a XVI)
 
-1. **Ubicación:** un punto despejado (sin edificios ni árboles por encima de 15° de elevación), lejos de transformadores y antenas, donde no estorbe y quede seguro. Material: clavo PK en el concreto o una mojonera nueva.
-2. **Instalación:** centra y nivela sobre el punto. Mide y anota la **altura de antena** y cómo la mediste (vertical o inclinada, a qué parte de la antena).
-3. **Registro estático:** activa el registro bruto (RINEX u otro formato nativo) a 1 s, o a 5 s si solo usarás PPP. Deja la base fija **mínimo 2 horas, idealmente 4**, durante toda la jornada.
-4. **Coordenada provisional:** arranca el RTK con la posición autónoma promediada de la base (con un error de unos metros). Al terminar la jornada esa coordenada se corrige (ver 8.1).
-5. **Si ya tienes la base calculada de una visita anterior**, captura su coordenada ajustada y omite la corrección.
-6. **Comprobación:** al inicio y al final de la jornada mide con el rover un punto fijo de control (por ejemplo, otro clavo PK a 20 m). Las dos lecturas deben coincidir en 2 cm o menos.
+## 5.1 Línea de control acimutal y lineal (una vez por sector o colonia)
+El manual pide ligarse a la RGNA mediante **estaciones GPS de control** (opción XI-c):
+
+1. **Dos vértices de control** separados **al menos 500 m**, de preferencia **intervisibles** (XII). Elígelos en lugares despejados y seguros (camellones, plazas, bordes de banqueta) que cubran la colonia.
+2. **Monumentación (XIII):**
+   - Bloque de concreto de 40 × 40 cm en planta y 40 cm de alto (50 × 50 × 60 cm en terreno blando), sobre una cama de arena de 15 cm, con **varilla testigo** de ½" alineada al centro.
+   - **Placa de aluminio** con la leyenda "ESTADO DE MÉXICO", municipio, institución, siglas CAT, número de vértice y fecha. En zona urbana la placa queda **al ras**.
+   - Llena la **Cédula de Estaciones de Control Geodésico**: croquis, itinerario para llegar, descripción del entorno, coordenadas y datos técnicos.
+3. **Observación (XIV):**
+   - **Método estático**, con los dos receptores **observando al mismo tiempo**, uno en cada vértice.
+   - Equipo de **doble frecuencia**, **4 satélites como mínimo**, **máscara de elevación de 10°** e **intervalo de registro de 15 s**.
+   - Duración según la distancia a la estación RGNA: **60 min si está a menos de 100 km** (Texcoco cumple). Se recomienda observar 2 horas para tener margen.
+   - El manual permite receptores de **una sola frecuencia** solo a menos de 40 km de la RGNA. Los ZED-F9P, Emlid y los receptores chinos de gama media son de doble frecuencia.
+4. **Posproceso (XI-c y XXI):**
+   - Procesa las líneas base RGNA → V1, RGNA → V2 y V1 → V2 en **tiempos comunes**.
+   - Haz un **ajuste por mínimos cuadrados**. Usa el software de posproceso de la marca de tu receptor con ajuste de red, o equivalente; con dos estaciones RGNA el ajuste es más robusto.
+   - **Exactitud exigida:** CEP95 ≤ **0.10 m** para los vértices de control GPS (XIX).
+5. Conserva los archivos crudos, los RINEX de la RGNA, el reporte de procesamiento y el de ajuste. Forman parte de la memoria técnica.
+
+## 5.2 Base RTK del día (propagación de coordenadas, XVI)
+1. Instala la base **sobre uno de los vértices de control**, con su coordenada ajustada ya capturada. Centra, nivela y anota la **altura de antena** y cómo la mediste.
+2. **Comprobación al inicio y al final de la jornada:** mide con el rover el **otro vértice de control**. La diferencia con su coordenada ajustada debe ser de 3 cm o menos. Esto sirve como liga y como comprobación de orientación.
+3. Deja la base **registrando datos crudos** toda la jornada; así puedes reprocesar puntos dudosos (PPK).
+4. **Antes de tener la línea de control ajustada** (primera visita), puedes iniciar con una coordenada provisional de la base. Al final, aplica el desplazamiento según 8.1.
 
 # 6. Vuelo con DJI Mini 3
 
@@ -133,7 +161,9 @@ Para el programa de regularización, propón al ayuntamiento recibir y revisar l
 En cada predio, y en este orden:
 1. **Antes de medir**, explica a todos los presentes los **alcances administrativos y las limitaciones legales** del levantamiento y en qué consisten los trabajos. Conviene decir que el levantamiento catastral **no otorga ni resuelve propiedad**.
 2. **Verifica que los colindantes presentes acrediten** su propiedad o posesión con un documento y una identificación oficial.
-3. **Localiza los vértices limítrofes que, de común acuerdo, indiquen el solicitante y los colindantes.** Si no hay acuerdo, registra cada versión y deja el lindero como **en conflicto**.
+3. **Localiza los vértices limítrofes que, de común acuerdo, indiquen el solicitante y los colindantes** (LT019).
+   - Si **no se conocen** los vértices, **suspende la diligencia** y anótalo en el acta. **No replantees.**
+   - Si hay **desacuerdo**, no midas ese lindero como si estuviera acordado. Asienta en el acta las manifestaciones de cada parte y consulta con el director de catastro si procede suspender o reprogramar.
 4. Mide (GNSS o cinta) y **registra los datos en papel** durante la diligencia, en libreta o croquis de campo, aunque el equipo guarde los datos digitalmente.
 5. **Llena el acta circunstanciada** con:
    - el folio consecutivo del *Control de Levantamientos*;
@@ -188,11 +218,21 @@ En cada predio, y en este orden:
    - `pc-classify: true` (ayuda a separar el terreno de construcciones y árboles para el DTM)
 4. Exporta: ortofoto (GeoTIFF), DSM, DTM, nube de puntos (LAZ) y el reporte de calidad.
 
-## 8.4 Control de calidad (obligatorio)
-- Sobre la ortofoto y el DTM, mide las coordenadas de los puntos CHK y compáralas con las medidas por GNSS.
-- Calcula el RMSE en planta y en altura y anótalo en la memoria técnica.
-- **Criterio interno sugerido:** 5 cm o menos en planta y 8 cm o menos en altura. Si no se cumple, revisa el marcado de los puntos de control o agrega más. **[VERIFICAR]** la tolerancia oficial del manual.
-- Las **coordenadas de los vértices de lotes salen del GNSS**, no de la ortofoto. La ortofoto sirve para dibujar construcciones, vialidades y vértices que no se pudieron ocupar (dejándolo anotado).
+## 8.4 Control de calidad: tolerancias oficiales del Manual 2024 (CEP95)
+| Elemento | Exactitud exigida | Referencia | Lo esperable con este método |
+|---|---|---|---|
+| Vértices de control GPS | ≤ 0.10 m | XIX | 1–2 cm |
+| Vértices de apoyo | ≤ 0.20 m | XIX | 1–3 cm |
+| **Vértices prediales**, horizontal | **≤ 0.30 m** | XX | 1–3 cm (RTK) |
+| Vértices prediales, vertical | < 0.50 m | XX | 2–5 cm |
+| Puntos de control fotogramétrico (vuelo < 1:5,000) | ≤ 0.10 m | XXIV | 1–3 cm |
+| Imagen para predios **urbanos**: tamaño de píxel | ≤ 0.20 m | XXVI | ≈ 0.02 m (Mini 3 a 60 m) |
+| Imagen para predios urbanos: exactitud | < 0.40 m | XXVII | 3–5 cm con puntos de control |
+
+- Sobre la ortofoto, mide los puntos de verificación (CHK) y compáralos con las coordenadas GNSS. Calcula el RMSE y el **CEP95 ≈ 2.45 × RMSE por eje** (aproximación cuando los errores en X e Y son parecidos). Anótalo en la memoria técnica.
+- **Criterio interno**, mucho más estricto que el oficial: 5 cm o menos en planta y 8 cm o menos en altura. Así te queda margen frente a cualquier perito.
+- Los **vértices prediales salen del GNSS** (método geodésico-topográfico). Los tomados de la ortofoto solo se usan si el vértice es **fotoidentificable** (XXII), y se integran a los datos GNSS (XXVIII). En la tabla de vértices anota qué método se usó para cada uno.
+- Para comparar: Google Earth no garantiza ni el tamaño de píxel ni la exactitud de XXVI y XXVII para predios urbanos.
 
 ## 8.5 Curvas de nivel
 - En QGIS: *Ráster → Extracción → Curvas de nivel* sobre el **DTM**, con un intervalo de 0.50 m (o 1.00 m si el terreno es plano). Las maestras se ponen cada 5 curvas.
@@ -203,25 +243,38 @@ En cada predio, y en este orden:
 2. Captura los vértices en la hoja **Vertices** de `Plantilla_Cuadro_de_Construccion.xlsx`. La plantilla calcula rumbos, distancias, superficie y perímetro.
 3. Compara la superficie de la plantilla con la del CAD/QGIS; deben coincidir.
 4. Digitaliza las construcciones sobre la ortofoto. Indica niveles y m² construidos por nivel (lo que no se ve desde el aire se toma en sitio).
-5. **Contenido del plano.** Los requisitos marcados con ✔ vienen de la NICL "Funciones del proceso catastral" (Gaceta del Gobierno, 6 de julio de 2022, elemento 2 de 4). Los demás son recomendaciones para catastro y para el juicio de usucapión.
-   - ✔ Nombre del **municipio** donde está el predio, según el documento que acredita la propiedad o posesión
-   - ✔ **Superficie en m² con aproximación a centímetros** (2 decimales)
-   - ✔ **Medidas de las colindancias en metros con aproximación a centímetros** (2 decimales)
-   - ✔ **Puntos de inflexión o radiaciones** del predio (vértices numerados)
-   - ✔ **Orientación al norte** con simbología convencional y **croquis de localización**
-   - ✔ **Nombres de colindantes y vialidades** según la *relación de colindantes* que entrega el solicitante
-   - ✔ **Fecha del levantamiento** (la que fijó la autoridad catastral en la notificación)
-   - ✔ **Escala gráfica en metros**
-   - ✔ **Folio del acta**, consecutivo y sin repetir según el *Control de Levantamientos Topográficos Catastrales*
-   - ✔ **Nombres y firmas** de los responsables del **levantamiento**, del **cálculo** y de la **autorización** del plano oficial
-   - ✔ **Sello oficial** de la autoridad catastral
-   - ✔ **Método de medición** empleado. Para este método indica: *"Método de precisión: GNSS RTK ligado a la RGNA–INEGI y fotogrametría con dron con puntos de control"*.
-   - Cuadro de construcción (EST–PV, rumbo, distancia, V, coordenadas Y, X)
-   - Medidas y colindancias por orientación en formato registral, y ubicación del lote dentro de la parcela matriz (ver sección 12)
-   - Superficie construida, curvas de nivel, clave catastral, propietario o poseedor y ubicación
-   - Sistema de referencia, proyección y equipo; cédula profesional del técnico
+5. **Contenido obligatorio del plano (Manual LT025 y LT026, igual para plano analógico y digital):**
+   - a) Imagen institucional de la autoridad catastral
+   - b) Nombre del propietario
+   - c) Clave catastral
+   - d) Ubicación (calle y número oficial)
+   - e) Croquis de localización
+   - f) Nombre del municipio
+   - g) **Superficie en m² con aproximación a centímetros**
+   - h) **Medidas de las colindancias en metros con aproximación a centímetros**
+   - i) Puntos de inflexión o radiaciones
+   - j) Orientación del dibujo hacia el norte, con simbología convencional
+   - k) **Cuadro de construcción congruente con un sistema específico de coordenadas** (lo genera la plantilla)
+   - l) Nombres de los colindantes y, en su caso, de las vialidades
+   - m) Fecha en que se hizo el levantamiento
+   - n) Escala gráfica en metros
+   - o) Folio del acta
+   - p) Nombres y firmas de los responsables del **levantamiento**, del **cálculo** y de la **autorización**
+   - q) Sello de la autoridad catastral
+   - r) **Método de medición: "con aparatos de precisión"**. Detállalo así: *GNSS ligado a la RGNA y fotogrametría con puntos de control (Manual III.1.4.2-XVII)*.
+   - Opcionales (LT026): croquis de aproximación con las vialidades limítrofes, fundamento legal y folio del recibo de pago.
 
-   **Redondeo:** las coordenadas van con 3 decimales; las distancias y la superficie del plano, con 2 (centímetros), como pide la NICL. La superficie se calcula **con las coordenadas** y se redondea al final, no a partir de las distancias ya redondeadas. Usa **las mismas cifras de 2 decimales** en el plano, el acta y la demanda.
+6. **Formato de dibujo (Manual III.1.4.3):**
+   - **Hoja de 95 × 70 cm** orientada al norte, con el lado largo de oeste a este. Márgenes: 5 cm arriba y abajo, 3 cm a la izquierda y 2 cm a la derecha.
+   - **Cuadrícula de 10 × 10 cm** con cruces de 0.5 cm y coordenadas (X, Y) anotadas en el margen.
+   - **Escala 1:500 o 1:1000**, según la de los planos catastrales del municipio. Elígela con las coordenadas máximas y mínimas para que el predio quede bien acomodado.
+   - Vértices encerrados en un **círculo pequeño y numerados**. Distancias entre vértices al centímetro, y **superficie al centro del predio**.
+   - **Tira marginal** con el título "Levantamiento topográfico", propietario, ubicación, municipio, escala, superficie, nombres de quienes hicieron el levantamiento, el cálculo y el dibujo, y la fecha (día/mes/año).
+   - En zonas urbanas, identifica el predio con su clave catastral para actualizar la cartografía (punto 13).
+
+   Recomendación adicional para el juicio: incluye también las medidas y colindancias en formato registral y la ubicación del lote dentro de la parcela matriz (sección 12).
+
+   **Redondeo:** las coordenadas van con 3 decimales; las distancias y la superficie del plano, con 2 (centímetros). La superficie se calcula **con las coordenadas** completas y se redondea al final. Usa **las mismas cifras** en el plano, el acta y la demanda.
 
 # 9. Entregables por lote
 1. Plano catastral en PDF firmado y en DWG/DXF y SHP.
@@ -255,6 +308,15 @@ Con este método un equipo de 2 personas puede levantar en campo una manzana com
 
 > Nota del director de catastro: los planos se presentarán como prueba en **juicios de usucapión**. Esto sube el nivel de exigencia, porque el plano deja de ser solo un trámite administrativo y pasa a ser **prueba pericial** que el juez y la contraparte pueden revisar. Los criterios de esta sección son técnicos; los jurídicos deben confirmarse con el abogado de cada caso.
 
+## 12.0 Atención: limitación del manual (LT006)
+El Manual 2024 dice que los resultados del levantamiento topográfico catastral *"sólo se podrán utilizar para trámites administrativos relacionados con el inmueble de que se trate"*. Por eso **el plano catastral oficial, con sello de catastro, puede ser objetado si se presenta solo como prueba en el juicio.**
+
+**Solución recomendada, que debes confirmar con el abogado y con el director de catastro:**
+- **Producto 1. Plano catastral oficial** (formato LT025, sello de catastro), para el padrón y los trámites administrativos.
+- **Producto 2. Plano topográfico y dictamen técnico** firmado por ti como **arquitecto con cédula**, con **los mismos datos**, para ofrecerse en el juicio como documental privada o como base de la **prueba pericial en topografía**.
+
+Así los dos documentos se respaldan entre sí y ninguno se usa fuera de su alcance legal.
+
 ## 12.1 Por qué importa
 En la usucapión el actor debe acreditar, entre otras cosas, la **identidad del inmueble**: que lo que posee es exactamente lo que demanda, y que forma parte del predio inscrito a nombre del demandado (el titular registral). Esa identidad normalmente se prueba con el plano topográfico y, si se ofrece, con la **pericial en topografía**.
 
@@ -283,7 +345,15 @@ En la usucapión el actor debe acreditar, entre otras cosas, la **identidad del 
 - Qué pasa con las **calles**: siguen siendo parte de la parcela inscrita hasta que se donen o se municipalicen.
 
 # 13. Referencias normativas
-- *Manual Catastral del Estado de México* (reforma publicada en la Gaceta del Gobierno, 2024). Pendiente de revisar el texto completo.
-- *Norma Institucional de Competencia Laboral "Funciones del proceso catastral"*, IHAEM, Gaceta del Gobierno del Estado de México, 6 de julio de 2022. Elemento 2 de 4, "Levantamiento topográfico catastral". Sirve como referencia para certificarse; el certificado tiene vigencia de 1 año y no exige título profesional.
+- **Manual Catastral del Estado de México**, Gaceta del Gobierno, 29 de mayo de 2024 (Sección Segunda, Tomo CCXVII, No. 95, pp. 4–177). Abroga el de 2014. Las secciones clave para este trabajo son:
+  - III.1.3: políticas LT001 a LT030;
+  - III.1.4.2: levantamiento con instrumentos de precisión;
+  - III.1.4.3: dibujo;
+  - III.2: verificación de linderos;
+  - los anexos de formatos: solicitud, relación de colindantes, notificación, citatorio, acta, control y reporte.
+- **NICL "Funciones del proceso catastral"**, IHAEM, Gaceta del Gobierno, 6 de julio de 2022. Es obligatoria según la política LT014.
+- **INEGI:** Norma Técnica para el Sistema Geodésico Nacional, Norma Técnica de Estándares de Exactitud Posicional, y *Lineamientos y Especificaciones Técnicas para la Generación y Actualización de Información Geográfica* (citados en LT014 y III.1.4.2).
 - Código Financiero del Estado de México y Municipios, Título Quinto "Del Catastro", y su Reglamento.
 - Código Civil para el Estado de México.
+
+Pendiente de revisar en el texto completo del manual: las políticas LT002 a LT030 que no se transcribieron, III.2 (verificación de linderos) y los formatos anexos.
