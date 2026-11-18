@@ -27,6 +27,7 @@ Fuente: Gaceta del Gobierno, 29 de mayo de 2024, Sección Segunda, No. 95. Abrog
 - **LT020 y III.1.4.2-I. Cuándo se exige instrumento de precisión:** predios mayores de 2,000 m², topografía accidentada, configuración muy irregular o **cuando no exista cartografía** en la cual apoyarse. Los predios menores de 2,000 m² se pueden medir con cinta apoyándose en cartografía 1:500 o 1:1000. En ex-parcelas sin cartografía, el método de precisión es el que corresponde, y además es el más defendible.
 - **III.1.4.2-XVII. Métodos admitidos para linderos:** **geodésico-topográfico, fotogramétrico o su combinación.** GNSS más dron está expresamente previsto.
 - **LT019. Vértices de común acuerdo:** se ubican en presencia del solicitante y los colindantes, sobre los puntos que **de común acuerdo** señalen. Si los vértices son desconocidos, **se suspende la diligencia**: no se replantea.
+- **Drones:** el manual **no los menciona**. Quedan cubiertos por el método fotogramétrico genérico de III.1.4.2 (XXII a XXVIII: "cámaras aéreas digitales o sensores remotos", GSD). En el plano y la memoria describe el método como **fotogramétrico con sensor digital y puntos de control GPS**.
 - **LT006. Limitación legal:** los resultados del levantamiento topográfico catastral *"sólo se podrán utilizar para trámites administrativos"*. Ver la sección 12 por sus efectos en el juicio de usucapión.
 
 # 2. Marco de referencia
@@ -82,18 +83,39 @@ Fuente: Gaceta del Gobierno, 29 de mayo de 2024, Sección Segunda, No. 95. Abrog
 5. **Plan de vuelo** (ver sección 6).
 6. **Aviso a vecinos y colindantes:** el ayuntamiento debe citar a propietarios y colindantes para el día del levantamiento, porque los vértices se marcan **en presencia de ambos colindantes**. Usa los formatos anexos del Manual 2024: notificación, citatorio y relación de colindantes.
 
-# 4-bis. Expediente previo por predio (NICL de 2022)
-Antes de programar la diligencia, el expediente de cada lote debe contener:
-- [ ] **Solicitud por escrito** del servicio, en el formato anexo del Manual Catastral vigente
-- [ ] **Identificación oficial vigente** del propietario o poseedor (o de la persona autorizada)
-- [ ] **Documento que acredite la propiedad o posesión** (contrato privado, constancia ejidal, título, etc., según el manual)
-- [ ] **Comprobante del pago predial** o certificación de clave catastral
-- [ ] **Relación actualizada de colindantes** con nombres y domicilios (de aquí salen los nombres que van en el plano y los citatorios)
-- [ ] **Croquis de localización** del inmueble
-- [ ] **Recibo de pago** del servicio
-- [ ] Registro en el **Control de Levantamientos Topográficos Catastrales**: número progresivo, folio de la orden de trabajo y fecha de ejecución notificada
+# 4-bis. Expediente y trámite por predio (Manual 2024: LT002 a LT013)
+**Secuencia del trámite.** El manual no tiene un procedimiento general aparte; la secuencia sale de las políticas:
 
-Para el programa de regularización, propón al ayuntamiento recibir y revisar los expedientes **por manzana completa** antes del día de campo.
+1. Solicitud y requisitos (LT002–LT004)
+2. Cobro por tarifa (LT003)
+3. Cotejo de documentos y clave catastral (LT008)
+4. Fecha y notificación al solicitante y a los colindantes, **con al menos 3 días de anticipación**, firmada por la autoridad catastral (LT011–LT012)
+5. Orden de trabajo al especialista certificado (LT013–LT014)
+6. Diligencia (LT015–LT021)
+7. Acta (LT022)
+8. Cálculo y plano (LT024–LT026)
+9. Copia del plano al IGECEM (LT027)
+10. Plazo de **15 días hábiles para pedir rectificación** (LT030)
+
+**Expediente de cada lote (LT002):**
+- [ ] Solicitud por escrito o en el formato de la Gaceta (p. 138)
+- [ ] **Relación de colindantes**: nombres, apellidos y domicilios **dentro del Estado de México** (formato en `formatos/Relacion_de_Colindantes.docx`). Si son predios baldíos o se desconoce el domicilio, se usan los nombres del documento o del padrón y se proponen **dos testigos de asistencia** (LT004).
+- [ ] **Original y copia** del documento de propiedad o posesión. Para este programa los más comunes son:
+  - b) contrato privado de compraventa, permuta, cesión o donación;
+  - f) **cédula de contratación** de la dependencia regularizadora;
+  - g) **título, certificado o cesión de derechos agrarios o parcelarios**, sentencia agraria o **constancia de posesión ejidal**.
+
+  También valen: escritura, sentencia ejecutoriada, manifestación de traslado de dominio, acta de entrega de interés social e inmatriculación.
+- [ ] Predial del ejercicio corriente, o certificación de clave y valor catastral
+- [ ] Croquis de localización
+- [ ] Identificaciones del propietario o poseedor y, en su caso, carta poder
+- [ ] Comprobante de pago del servicio según la tarifa vigente
+- [ ] Registro en el **Control de Levantamientos** (`formatos/Control_y_Reporte_Levantamientos.xlsx`)
+
+**Notas para el programa:**
+- **Usar el servicio "levantamiento topográfico catastral", no "verificación de linderos".** La verificación (III.2) no cita a colindantes ni levanta acta: termina en un informe. Solo procede si las medidas **no exceden** las del documento, y su resultado **no se puede inscribir en el IFREM** (VL001).
+- Recibe y revisa los expedientes **por manzana completa**. Así el ayuntamiento emite todas las notificaciones a la vez y programa una sola jornada.
+- Antes del día de campo conviene hacer **mesas de conciliación** entre vecinos. Por LT021, un solo colindante en desacuerdo **termina la diligencia**.
 
 # 5. Control geodésico y base GNSS (Manual III.1.4.2, XI a XVI)
 
@@ -163,9 +185,11 @@ En cada predio, y en este orden:
 2. **Verifica que los colindantes presentes acrediten** su propiedad o posesión con un documento y una identificación oficial.
 3. **Localiza los vértices limítrofes que, de común acuerdo, indiquen el solicitante y los colindantes** (LT019).
    - Si **no se conocen** los vértices, **suspende la diligencia** y anótalo en el acta. **No replantees.**
-   - Si hay **desacuerdo**, no midas ese lindero como si estuviera acordado. Asienta en el acta las manifestaciones de cada parte y consulta con el director de catastro si procede suspender o reprogramar.
+   - Si algún colindante **no está de acuerdo** con las medidas o **se opone**, **se dan por terminados los trabajos** y se anota en el acta (LT021).
+   - Si un colindante notificado **no se presenta**, la diligencia sigue con el solicitante. En el acta se escribe textualmente: *"El C. …, colindante de la orientación …, no se encuentra presente, no obstante haber sido notificado conforme a derecho"* (LT018). Se recurre a los **dos testigos de asistencia** (LT011), que entregan copia de su identificación y firman.
+   - **LT023:** no se replantea ningún otro proyecto del solicitante ni se mide otro inmueble distinto al de la solicitud.
 4. Mide (GNSS o cinta) y **registra los datos en papel** durante la diligencia, en libreta o croquis de campo, aunque el equipo guarde los datos digitalmente.
-5. **Llena el acta circunstanciada** con:
+5. **Llena el acta** (formato de la Gaceta p. 144, en `formatos/Acta_Levantamiento_Topografico_Catastral.docx`, con guía de llenado). Debe ir en **papelería y con sello oficial** (LT022) y contener:
    - el folio consecutivo del *Control de Levantamientos*;
    - el nombre del solicitante, cotejado con la solicitud;
    - los fundamentos legales;
@@ -356,4 +380,4 @@ En la usucapión el actor debe acreditar, entre otras cosas, la **identidad del 
 - Código Financiero del Estado de México y Municipios, Título Quinto "Del Catastro", y su Reglamento.
 - Código Civil para el Estado de México.
 
-Pendiente de revisar en el texto completo del manual: las políticas LT002 a LT030 que no se transcribieron, III.2 (verificación de linderos) y los formatos anexos.
+Ya se revisaron, en transcripción textual cotejada con el PDF: políticas LT001–LT030, III.1.4.2, III.1.4.3, III.2 (VL001–VL021) y formatos (pp. 138–149). En todo el manual **no se mencionan** drones, usucapión, juicios ni peritos. El **padrón de especialistas** aparece solo en LT014, **sin requisitos de inscripción**: hay que consultarlos con el IGECEM; su tarifa incluye "Registro Estatal de Especialistas en Levantamiento Topográfico Catastral" y su renovación. Falta transcribir III.1.4.1 (método con cinta y sus tolerancias), que no aplica al método de precisión.
